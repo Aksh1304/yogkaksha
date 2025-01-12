@@ -1,4 +1,4 @@
-/* General Styles */
+/* Global styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,70 +7,228 @@
 }
 
 body {
-    line-height: 1.6;
+    background-color: #f0f5f5;
     color: #333;
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Header Section */
+/* Header styles */
 .header {
-    background: linear-gradient(to right, #11998e, #38ef7d);
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #f0f5f5, #eef3f0);
+    color: rgb(100, 93, 93);
+    padding: 20px 30px;
     animation: fadeIn 1s ease-in;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #38ef7d;
+}
+
+.header .logo {
+    width: 200px;
+    height: auto;
+    animation: bounce 1.5s ease infinite;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .header p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1rem;
 }
 
+.header-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Button Base Styles */
 .header .btn {
-    padding: 10px 20px;
-    background: white;
-    color: #11998e;
-    border: none;
-    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    background-color: #11998e;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Hover Animation */
 .header .btn:hover {
-    background: #38ef7d;
-    color: white;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* About Section */
+/* Veg Button Styles */
+.header .veg-btn {
+    background: linear-gradient(45deg, #38ef7d, #11998e);
+    position: relative;
+    z-index: 1;
+}
+
+.header .veg-btn:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.header .veg-btn:hover:before {
+    top: -60%;
+    left: -60%;
+    width: 350%;
+    height: 350%;
+}
+
+/* Non-Veg Button Styles */
+.header .non-veg-btn {
+    background: linear-gradient(45deg, #ff7043, #e64a19);
+    position: relative;
+    z-index: 1;
+}
+
+.header .non-veg-btn:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.header .non-veg-btn:hover:before {
+    top: -60%;
+    left: -60%;
+    width: 350%;
+    height: 350%;
+}
+
+/* Focus Effect */
+.header .btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles for Buttons */
+@media (max-width: 768px) {
+    .header .btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    .header .veg-btn, .header .non-veg-btn {
+        font-size: 1.1rem;
+    }
+}
+
+/* About Section Styles */
 .about {
-    padding: 60px 20px;
-    background: #f9f9f9;
+    background-color: #fff;
+    padding: 80px 20px;
     text-align: center;
+    animation: fadeIn 1.5s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .about h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
-    animation: slideIn 1s ease-out;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #2c3e50;
 }
 
 .about p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #666;
 }
 
 .about img {
     max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1.2s ease-in-out;
+}
+
+.about img:hover {
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
+}
+
+/* Course Week Section */
+.course-week {
+    margin: 40px 0;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: zoomIn 1s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-week:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.course-week h4 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.course-week ul {
+    list-style: none;
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.course-week li {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.course-week h5 {
+    font-size: 1.6rem;
+    margin: 20px 0 10px;
+    font-weight: 600;
+}
+
+.course-week h6 {
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 
 /* Contact Section */
@@ -79,70 +237,58 @@ body {
     background: linear-gradient(to right, #ff758c, #ff7eb3);
     color: white;
     text-align: center;
+    animation: fadeInBackground 2s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    animation: fadeIn 1.5s ease-in;
 }
 
 .contact form {
     max-width: 600px;
     margin: 0 auto;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .contact form input,
 .contact form textarea {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 6px;
     border: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: #ff7eb3;
 }
 
 .contact form .btn {
     background: white;
     color: #ff758c;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 14px 28px;
+    border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 1.2rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact form .btn:hover {
     background: #ff7eb3;
     color: white;
-    transform: scale(1.05);
-}
-
-.contact-option {
-    margin-top: 20px;
-}
-
-.contact-option h3 {
-    margin-bottom: 10px;
-}
-
-.contact-option .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: white;
-    color: #ff758c;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.contact-option .btn:hover {
-    background: #ff7eb3;
-    color: white;
     transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
@@ -151,38 +297,71 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
 }
 
 /* Animations */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
 }
 
 @keyframes zoomIn {
-    from {
-        transform: scale(0.8);
-    }
-    to {
-        transform: scale(1);
-    }
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
 }
-.logo {
-    width: 80px; /* Adjust as needed */
-    height: auto;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in;
+
+@keyframes fadeInBackground {
+    from { background-color: rgba(255, 255, 255, 0); }
+    to { background-color: rgba(255, 118, 140, 1); }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 15px;
+    }
+
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .about h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        padding: 10px;
+    }
+
+    .contact form .btn {
+        padding: 10px 20px;
+    }
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +9,147 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
-        <div class="container">
-            <!-- Referencing the external SVG -->
+        <div class="container header-container">
             <img src="logo.svg" alt="Yoga Kaksha Logo" class="logo">
-            <h1>Yoga Kaksha</h1>
             <p>Embrace Wellness, Balance, and Peace</p>
-            <a href="#about" class="btn btn-primary">Learn More</a>
+            <div class="header-buttons">
+                <a href="#about" class="btn btn-primary">Learn More</a>
+                <a href="#contact" class="btn btn-secondary">Contact Us</a>
+            </div>
         </div>
     </header>
-    
 
     <section id="about" class="about">
         <div class="container">
             <h2>About Us</h2>
             <p>Welcome to Yoga Kaksha, where we offer holistic yoga courses for mental and physical well-being. Join us for just ₹99 (original price: ₹1500)!</p>
+            <h3>Course Structure</h3>
+            <p>The course is structured over a span of 4 weeks. Each week focuses on different aspects of yoga for your overall well-being.</p>
+            
+            <!-- Buttons for choosing diet option -->
+            <div class="diet-selection">
+                <button class="btn diet-btn" id="vegBtn">Vegetarian</button>
+                <button class="btn diet-btn" id="nonVegBtn">Non-Vegetarian</button>
+            </div>
+
+            <!-- Diet Plan Content -->
+            <div id="dietPlanContent">
+                <div class="course-week">
+                    <h4>Week 1: Foundation and Breathing</h4>
+                    <ul>
+                        <li>Introduction to Yoga and its Benefits</li>
+                        <li>Basic Asanas (Postures)</li>
+                        <li>Breathing Techniques (Pranayama)</li>
+                        <li>Stretching and Flexibility</li>
+                    </ul>
+                    <h5>Diet Plan for Week 1:</h5>
+                    <div id="vegOption">
+                        <h6>Vegetarian Option:</h6>
+                        <ul>
+                            <li>Breakfast: Poha with peanuts and coriander</li>
+                            <li>Lunch: Vegetable Pulao with raita</li>
+                            <li>Dinner: Lentil dal with chapati</li>
+                        </ul>
+                    </div>
+                    <div id="nonVegOption" style="display: none;">
+                        <h6>Non-Vegetarian Option:</h6>
+                        <ul>
+                            <li>Breakfast: Oats with boiled eggs and vegetables</li>
+                            <li>Lunch: Chicken Biryani with cucumber raita</li>
+                            <li>Dinner: Fish curry with rice</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course-week">
+                    <h4>Week 2: Strengthening the Body</h4>
+                    <ul>
+                        <li>Focus on Balance and Core Strength</li>
+                        <li>Introduction to Sun Salutations</li>
+                        <li>Incorporating Strength-based Asanas</li>
+                        <li>Building Stamina</li>
+                    </ul>
+                    <h5>Diet Plan for Week 2:</h5>
+                    <div id="vegOption2">
+                        <h6>Vegetarian Option:</h6>
+                        <ul>
+                            <li>Breakfast: Vegetable upma with coconut chutney</li>
+                            <li>Lunch: Chickpea curry (Chole) with brown rice</li>
+                            <li>Dinner: Paneer tikka with green chutney</li>
+                        </ul>
+                    </div>
+                    <div id="nonVegOption2" style="display: none;">
+                        <h6>Non-Vegetarian Option:</h6>
+                        <ul>
+                            <li>Breakfast: Paratha with boiled eggs</li>
+                            <li>Lunch: Mutton curry with steamed rice</li>
+                            <li>Dinner: Grilled chicken with roasted vegetables</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course-week">
+                    <h4>Week 3: Flexibility and Mindfulness</h4>
+                    <ul>
+                        <li>Focus on Deep Stretching</li>
+                        <li>Advanced Asanas for Flexibility</li>
+                        <li>Mindfulness and Meditation Techniques</li>
+                        <li>Yoga for Stress Relief</li>
+                    </ul>
+                    <h5>Diet Plan for Week 3:</h5>
+                    <div id="vegOption3">
+                        <h6>Vegetarian Option:</h6>
+                        <ul>
+                            <li>Breakfast: Moong dal chilla (savory pancake)</li>
+                            <li>Lunch: Vegetable khichdi with curd</li>
+                            <li>Dinner: Tofu stir-fry with broccoli</li>
+                        </ul>
+                    </div>
+                    <div id="nonVegOption3" style="display: none;">
+                        <h6>Non-Vegetarian Option:</h6>
+                        <ul>
+                            <li>Breakfast: Scrambled eggs with whole wheat toast</li>
+                            <li>Lunch: Chicken saagwala with rice</li>
+                            <li>Dinner: Fish tandoori with salad</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="course-week">
+                    <h4>Week 4: Advanced Practice and Integration</h4>
+                    <ul>
+                        <li>Mastering Complex Asanas</li>
+                        <li>Breathing for Relaxation and Energy</li>
+                        <li>Integrating Yoga into Daily Life</li>
+                        <li>Personalized Practice</li>
+                    </ul>
+                    <h5>Diet Plan for Week 4:</h5>
+                    <div id="vegOption4">
+                        <h6>Vegetarian Option:</h6>
+                        <ul>
+                            <li>Breakfast: Masala dosa with sambar</li>
+                            <li>Lunch: Palak paneer with roti</li>
+                            <li>Dinner: Baingan Bharta with chapati</li>
+                        </ul>
+                    </div>
+                    <div id="nonVegOption4" style="display: none;">
+                        <h6>Non-Vegetarian Option:</h6>
+                        <ul>
+                            <li>Breakfast: Vegetable omelette with toast</li>
+                            <li>Lunch: Butter chicken with naan</li>
+                            <li>Dinner: Prawn curry with rice</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <p>To join the course, kindly proceed with the payment of ₹99 via the link below:</p>
+            <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20want%20to%20join%20the%20Yoga%20course%20for%20₹99." target="_blank" class="btn btn-primary">Pay Now via WhatsApp</a>
+            <p>After your payment, you will receive the course schedule and diet plans directly through WhatsApp.</p>
             <img src="yoga.jpg" alt="Yoga Pose">
         </div>
     </section>
@@ -55,5 +180,34 @@
     <footer>
         <p>&copy; 2025 Yoga Kaksha. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Show diet options based on button click
+        document.getElementById('vegBtn').addEventListener('click', function () {
+            document.getElementById('vegOption').style.display = 'block';
+            document.getElementById('nonVegOption').style.display = 'none';
+            document.getElementById('vegOption2').style.display = 'block';
+            document.getElementById('nonVegOption2').style.display = 'none';
+            document.getElementById('vegOption3').style.display = 'block';
+            document.getElementById('nonVegOption3').style.display = 'none';
+            document.getElementById('vegOption4').style.display = 'block';
+            document.getElementById('nonVegOption4').style.display = 'none';
+            document.getElementById('vegBtn').classList.add('selected-veg');
+            document.getElementById('nonVegBtn').classList.remove('selected-non-veg');
+        });
+        document.getElementById('nonVegBtn').addEventListener('click', function () {
+            document.getElementById('vegOption').style.display = 'none';
+            document.getElementById('nonVegOption').style.display = 'block';
+            document.getElementById('vegOption2').style.display = 'none';
+            document.getElementById('nonVegOption2').style.display = 'block';
+            document.getElementById('vegOption3').style.display = 'none';
+            document.getElementById('nonVegOption3').style.display = 'block';
+            document.getElementById('vegOption4').style.display = 'none';
+            document.getElementById('nonVegOption4').style.display = 'block';
+            document.getElementById('vegBtn').classList.remove('selected-veg');
+            document.getElementById('nonVegBtn').classList.add('selected-non-veg');
+        });
+    </script>
 </body>
+
 </html>
